@@ -1,0 +1,63 @@
+-- MySQL dump 10.13  Distrib 8.0.38, for Win64 (x86_64)
+--
+-- Host: localhost    Database: samap
+-- ------------------------------------------------------
+-- Server version	8.3.0
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!50503 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `usuario`
+--
+
+DROP TABLE IF EXISTS `usuario`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `usuario` (
+  `ID` int NOT NULL AUTO_INCREMENT,
+  `NOME` varchar(100) DEFAULT NULL,
+  `SOBRENOME` varchar(100) DEFAULT NULL,
+  `DATA_NASC` date DEFAULT NULL,
+  `CPF` varchar(20) DEFAULT NULL,
+  `EMAIL` varchar(100) NOT NULL,
+  `SENHA` varchar(100) NOT NULL,
+  `ID_FUNCAO` int DEFAULT NULL,
+  `TELEFONE` varchar(20) DEFAULT NULL,
+  `DATA_INICIO` datetime DEFAULT CURRENT_TIMESTAMP,
+  `CAMINHO_IMAGEM` varchar(4000) DEFAULT NULL,
+  `VERIFICA_VENDEDOR` int DEFAULT NULL,
+  PRIMARY KEY (`ID`),
+  KEY `ID_FUNCAO` (`ID_FUNCAO`),
+  CONSTRAINT `usuario_ibfk_1` FOREIGN KEY (`ID_FUNCAO`) REFERENCES `funcao` (`ID`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `usuario`
+--
+
+LOCK TABLES `usuario` WRITE;
+/*!40000 ALTER TABLE `usuario` DISABLE KEYS */;
+INSERT INTO `usuario` VALUES (1,'Vinícius ','Maurer','2005-05-10','029.392.750-25','vinicius.maurer@institutoivoti.com.br','123',NULL,'(51) 999962634','2024-11-22 20:55:41','imagens/usuarios/4.png',NULL),(2,'SN TECH CORPORATION LTDA','SN TECH','2024-09-12','12.345.678/0001-95','samuel@gmail.com','123',NULL,'(51) 999942404','2024-11-22 20:59:15','imagens/usuarios/sntech-logo.jpg',1),(3,'Malu','Klein','2006-05-30','02524560090','malupklein@gmail.com','123',NULL,'51991128746','2024-11-24 20:37:34',NULL,NULL),(4,'Kabum LTDA','KaBuM','2012-01-24','05.570.714/0017-16','kabum@gmail.com','123',NULL,'(51)912345678','2024-11-24 20:58:09','imagens/usuarios/kabum-logo.png',1),(5,'cleber','raimundo','2024-11-24','28374738','cleb@gm.c','12',NULL,'12737337','2024-11-24 21:34:31',NULL,NULL),(6,'Vinicius ','Maurer','2024-12-02','02939275025','vinicius@gmail.com','123',NULL,'51999962604','2024-12-08 18:59:24',NULL,NULL);
+/*!40000 ALTER TABLE `usuario` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2024-12-08 20:56:25

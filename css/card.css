@@ -1,0 +1,135 @@
+/* Card do produto */
+.product-card {
+  background-color: #ffffff;
+  border: 0.1rem solid #000000;
+  border-radius: 0.625rem;
+  padding: 0.9375rem;
+  margin-bottom: 1.25rem;
+  box-shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+  position: relative;
+}
+
+.product-card:hover {
+  transform: scale(1.05);
+}
+
+/* Imagem do produto */
+.product-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-bottom: 0.0625rem solid #ddd;
+  margin-bottom: 0.9375rem;
+}
+
+/* Título do produto */
+.product-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.625rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Preço do produto */
+.product-price {
+  color: #459653;
+  font-size: 1rem;
+  margin-bottom: 0.625rem;
+  font-weight: bold;
+}
+
+/* Descrição do produto */
+.product-description {
+  font-size: 1rem;
+  color: #459653;
+  margin-bottom: 0.9375rem;
+}
+
+/* Botão de compra */
+.btn-buy {
+  background-color: #459653;
+  color: #ffffff;
+  padding: 0.625rem 0.9375rem;
+  border: none;
+  border-radius: 0.3125rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-buy:hover {
+  background-color: #ffffff;
+  color: #459653;
+  border: 0.0625rem solid #459653;
+}
+
+/* Botão de remoção */
+.btn-remove {
+  background-color: #d61d1d;
+  color: #ffffff;
+  padding: 0.325rem 0.7375rem;
+  border: none;
+  border-radius: 0.3125rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  float: right;
+}
+
+.btn-remove:hover {
+  background-color: #ffffff;
+  color: #ff0000;
+  border: 0.0625rem solid #ff0000;
+}
+
+/* Porcentagem de desconto fixada */
+.fixed-tag {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #ff8c00;
+  color: white;
+  padding: 5px 10px;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 5px;
+  z-index: 1;
+}
+
+/* Ribbon de desconto */
+.ribbon {
+  --f: 0.5em;
+  font-size: 28px;
+  font-weight: bold;
+  color: #fff;
+  position: absolute;
+  top: 0;
+  right: 0;
+  line-height: 1.8;
+  padding-inline: 1lh;
+  padding-bottom: var(--f);
+  border-image: conic-gradient(#0008 0 0) 51% / var(--f);
+  clip-path: polygon(
+    100% calc(100% - var(--f)),
+    100% 100%,
+    calc(100% - var(--f)) calc(100% - var(--f)),
+    var(--f) calc(100% - var(--f)),
+    0 100%,
+    0 calc(100% - var(--f)),
+    999px calc(100% - var(--f) - 999px),
+    calc(100% - 999px) calc(100% - var(--f) - 999px)
+  );
+  transform: translate(calc((1 - cos(45deg)) * 100%), -100%) rotate(45deg);
+  transform-origin: 0% 100%;
+  background-color: #ff8c00;
+}
+
+.ribbon span {
+  position: relative;
+  top: 0;
+  left: -5px;
+  transform: rotate(-45deg);
+  font-size: 14px;
+  font-weight: bold;
+}

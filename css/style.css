@@ -1,0 +1,283 @@
+/* FONTE PADRÃO */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* NAVBAR */
+#navcolor {
+  color: #459653;
+  padding-right: 40px;
+  font-size: 1.2rem;
+  background-color: white;
+  padding: 1rem;
+  border: 1px solid #ffffff;
+  text-align: center;
+}
+
+#navcolor:hover {
+  color: #f9f24a;
+}
+
+.selected {
+  border-bottom: 3px solid #459653;
+  padding-bottom: 4px;
+}
+
+.navbar-nav {
+  position: absolute;
+  right: 0px;
+}
+
+/* TÍTULOS */
+.titulo-samap {
+  font-size: 2rem;
+  color: #4c4c4c;
+}
+
+.titulo-categorias,
+.titulo-ofertas,
+.titulo-produtos {
+  font-size: 1.5rem;
+  color: #ffffff;
+  margin: 10px;
+}
+
+.titulo-produtos {
+  color: #459653;
+}
+
+.titulo-contato,
+.titulo-login {
+  font-size: 2rem;
+  text-align: center;
+  color: #ff8c00;
+  margin: 10px;
+}
+
+.titulo-produto-carrinho {
+  font-size: 24px;
+  color: green;
+  font-weight: bold;
+}
+
+/* LOGIN E CRIAR CONTA */
+#texto-login {
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.input-email,
+.input-senha,
+.input-date {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.input-date {
+  color: #ccc;
+}
+
+.input-email:focus,
+.input-senha:focus {
+  border-color: #459653;
+  box-shadow: 0 0 8px rgba(69, 150, 83, 0.2);
+  outline: none;
+}
+
+input[type="submit"] {
+  width: 100%;
+  padding: 15px;
+  background-color: #3bbe51;
+  border: none;
+  color: white;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+input[type="submit"]:hover {
+  background-color: #357a42;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* CONTATO */
+.map-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding-top: 56.25%; /* Proporção 16:9 */
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.map-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* CARRINHO */
+.titulo-carrinho {
+  font-size: 1.5rem;
+  color: #459653;
+  margin: 10px;
+}
+
+.img-produto-carrinho {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f0f0;
+  padding: 1rem;
+  border-radius: 1.25rem;
+}
+
+.produto-carrinho {
+  background-color: white;
+  border-radius: 2rem;
+  margin: 0 auto; /* Centraliza o card horizontalmente */
+  padding: 0 15px; /* Ajusta o padding lateral */
+  display: flex;
+  align-items: center; /* Centraliza verticalmente */
+  justify-content: center; /* Centraliza horizontalmente */
+}
+
+#info_carrinho {
+  height: auto;
+  background-color: #ccc;
+  border-radius: 1rem;
+  margin-bottom: 0.5rem;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+/* PÁGINA DE PERFIL */
+.input-perfil {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* IMAGEM PERFIL */
+.imagem-perfil {
+  height: auto;
+  border-radius: 0px 0px 30px 30px;
+  position: relative;
+  z-index: 10;
+}
+
+@media (max-width: 768px) {
+  /* Para telas menores que md */
+  .margin300 {
+    margin-top: 300px !important;
+  }
+
+  .funcao-perfil {
+    background-color: #4c4c4c;
+    text-align: center;
+    border-radius: 0px 0px 30px 30px !important;
+  }
+
+  .imagem-perfil {
+    height: auto;
+    border-radius: 0px 0px 0px 0px !important;
+    position: relative;
+    z-index: 10;
+  }
+
+  #navcolor {
+    min-width: 175px;
+  }
+}
+
+/* REMOVE HOVER DAS OPCOES DO DROPDOWN-LIST */
+.dropdown-menu-perfil .dropdown-item-perfil:hover,
+.dropdown-menu-perfil .dropdown-item-perfil:focus {
+  background-color: #ffffff;
+  color: #333;
+}
+.dropdown-menu-perfil .dropdown-item-perfil:active {
+  background-color: #ffffff;
+  color: green;
+}
+
+.toggle-container {
+  display: inline-flex;
+  background-color: #f3f4f6;
+  border-radius: 9999px;
+}
+.toggle-button {
+  padding: 8px 32px;
+  border: none;
+  background-color: transparent;
+  border-radius: 9999px;
+  cursor: pointer;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #4b5563;
+  transition: background-color 0.3s, color 0.3s;
+}
+.toggle-button.active {
+  background-color: #ff8a00;
+  color: white;
+}
+.toggle-button:hover:not(.active) {
+  color: #1f2937;
+}
+
+.toggle-switch {
+  display: inline-flex;
+  background-color: #f1f1f1;
+  border-radius: 30px;
+  padding: 4px;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-width: 300px;
+  height: 40px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.toggle-switch button {
+  position: relative;
+  padding: 6px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #777;
+  border: none;
+  background: none;
+  cursor: pointer;
+  z-index: 1;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  width: 50%;
+}
+
+@media (max-width: 600px) {
+  .toggle-switch {
+    width: 100%;
+    max-width: none;
+  }
+
+  .toggle-switch button {
+    font-size: 12px;
+    padding: 6px 15px;
+  }
+}
